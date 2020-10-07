@@ -15,4 +15,8 @@ fun main(args: Array<String>){
     val lootBoxTwo: LootBox<Coin> = LootBox(Coin(15))
     lootBoxOne.open = true
     lootBoxOne.fetch()?.run { println("You retrieve $name from the box!")}
+    val coin  = lootBoxOne.fetch(){
+        Coin(it.value*3)
+    }
+    coin?.let { println(it.value) }
 }
