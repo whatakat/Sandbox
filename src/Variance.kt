@@ -1,4 +1,4 @@
-class Barrel<in T>(val item: T)
+class Barrel<in T>(item: T)
 
 fun main(args: Array<String>){
     var fedoraBarrel: Barrel<Fedora> =
